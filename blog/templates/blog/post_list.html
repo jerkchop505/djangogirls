@@ -5,5 +5,20 @@
     <body>
         <h1>Blog template</h1>
         <p>Full of useful blogging information</p>
+        <div>
+            {% for post in posts %}
+                <div>
+                    <h2>
+                        <a href="">{{ post.title }}</a>
+                    </h2>
+                </div>
+                <div>
+                    <p>
+                        {{ post.text|linebreaksbr }}
+                    </p>
+                    <p>published: {{ post.published_date }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
